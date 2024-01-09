@@ -2,26 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components{
+    .navLink{
+        @apply p-4 capitalize rounded-full text-center hover:scale-110 hover:font-bold hover:underline decoration-[#F18900] decoration-2 
+         active:underline underline-offset-8 cursor-pointer transition-transform duration-200 ease-out;    
+    }
+    .headerTitle{
+        @apply px-10 pt-5 text-4xl font-serif capitalize underline decoration-[#F18000] decoration-2 underline-offset-4
+        decoration-double
+    }
 }
